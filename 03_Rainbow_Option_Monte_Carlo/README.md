@@ -102,9 +102,9 @@ A useful comparison is:
 
 | Method | Option Value | CI Lower | CI Upper | Relative CI Width |
 | --- | ---: | ---: | ---: | ---: |
-| Cholesky |  |  |  | 100% |
-| Antithetic + Moment Matching |  |  |  |  |
-| Inverse Cholesky |  |  |  |  |
+| Cholesky | 23.9863 | 23.3952 | 24.5773 | 100% |
+| Antithetic + Moment Matching | 23.9494 | 23.8236 | 24.0752 | 21.28% |
+| Inverse Cholesky | 23.9494 | 23.8236 | 24.0752 | 21.28% |
 
 ## Source Code
 
