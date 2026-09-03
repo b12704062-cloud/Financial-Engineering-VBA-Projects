@@ -115,7 +115,7 @@ Public Sub Run_HW3_Basic()
     Dim A() As Double
     A = CholeskyUpper(cov, n)
     
-    ' ¨C¦¸­«·s¶] Basic¡A´N­«³]¦@¦P¶Ã¼Æ
+    ' æ¯æ¬¡é‡æ–°è·‘ Basicï¼Œå°±é‡è¨­å…±åŒäº‚æ•¸
     ReDim SavedZBasic(1 To numRep, 1 To numSim, 1 To n)
     ReDim SavedZBonus1(1 To numRep, 1 To numSim, 1 To n)
     
@@ -202,7 +202,7 @@ Public Sub Run_HW3_Bonus1()
     
     Dim rep As Long, sim As Long, asset As Long
     
-    ' ¥Î Basic ªº«e¥b³¡¶Ã¼Æ¡A«á¥b³¡ª½±µ­¼ -1
+    ' ç”¨ Basic çš„å‰åŠéƒ¨äº‚æ•¸ï¼Œå¾ŒåŠéƒ¨ç›´æ¥ä¹˜ -1
     For rep = 1 To numRep
         For sim = 1 To halfN
             For asset = 1 To n
@@ -386,8 +386,8 @@ Private Function GetCovMatrix(ByRef ws As Worksheet, ByVal n As Long, ByRef sigm
     
     useCov = True
     
-    ' §PÂ_ covariance matrix ¬O§_¥i¥Î¡G
-    ' ¹ï¨¤½u¤@©w­n¶ñ¡F«D¹ï¨¤½u¥u­n¨ä¤¤¤@Ãä¦³¶ñ§Y¥i¡C
+    ' åˆ¤æ–· covariance matrix æ˜¯å¦å¯ç”¨ï¼š
+    ' å°è§’ç·šä¸€å®šè¦å¡«ï¼›éå°è§’ç·šåªè¦å…¶ä¸­ä¸€é‚Šæœ‰å¡«å³å¯ã€‚
     For i = 1 To n
         For j = i To n
             v1 = ws.Cells(i + 2, covCol + j).Value
@@ -410,7 +410,7 @@ Private Function GetCovMatrix(ByRef ws As Worksheet, ByVal n As Long, ByRef sigm
     Next i
     
     If useCov Then
-        ' ¨Ï¥Î covariance matrix
+        ' ä½¿ç”¨ covariance matrix
         For i = 1 To n
             For j = 1 To n
                 v1 = ws.Cells(i + 2, covCol + j).Value
@@ -431,7 +431,7 @@ Private Function GetCovMatrix(ByRef ws As Worksheet, ByVal n As Long, ByRef sigm
         Next i
         
     Else
-        ' ¨Ï¥Î sigma + correlation matrix
+        ' ä½¿ç”¨ sigma + correlation matrix
         Dim rho As Double
         
         For i = 1 To n
