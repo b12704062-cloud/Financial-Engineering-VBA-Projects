@@ -69,4 +69,4 @@ The VBA program includes:
 
 ## Source Code
 
-`src/option_pricing.bas`
+[View VBA Source Code](src/option_pricing.bas)
