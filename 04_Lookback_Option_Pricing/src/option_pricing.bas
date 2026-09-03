@@ -104,7 +104,7 @@ Private Sub PriceBasicTree_LevelBased(S0 As Double, r As Double, q As Double, si
     Dim maxK As Long
     maxK = 2 * n + 1
     
-    ' ¥ý«Ø¥ß©Ò¦³¥i¯àªÑ»ù(ST)ªºnode
+    ' å…ˆå»ºç«‹æ‰€æœ‰å¯èƒ½è‚¡åƒ¹(ST)çš„node
     Dim StockLevel() As Double
     ReDim StockLevel(0 To maxK - 1)
     
@@ -122,7 +122,7 @@ Private Sub PriceBasicTree_LevelBased(S0 As Double, r As Double, q As Double, si
     Dim level As Long
     Dim S As Double, Smax As Double
     
-    ' Terminal payoff¡G¥ýºâ§¹³Ì«á¤@´Á
+    ' Terminal payoffï¼šå…ˆç®—å®Œæœ€å¾Œä¸€æœŸ
     For j = 0 To n
         level = 2 * j - n
         S = StockLevel(level + offset)
@@ -154,14 +154,14 @@ Private Sub PriceBasicTree_LevelBased(S0 As Double, r As Double, q As Double, si
                 upLevel = curLevel + 1
                 downLevel = curLevel - 1
                 
-                ' up «áªº Smax level
+                ' up å¾Œçš„ Smax level
                 If StockLevel(upLevel + offset) > curSmax + TOL Then
                     upK = upLevel + offset
                 Else
                     upK = k
                 End If
                 
-                ' down «áªº Smax level
+                ' down å¾Œçš„ Smax level
                 If StockLevel(downLevel + offset) > curSmax + TOL Then
                     downK = downLevel + offset
                 Else
