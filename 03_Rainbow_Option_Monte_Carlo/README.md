@@ -96,15 +96,15 @@ The VBA program includes:
 
 ## Results
 
-<img width="1582" height="461" alt="image" src="https://github.com/user-attachments/assets/e7891c9a-e364-4092-983f-1d1c4623c708" />
+<img width="1582" height="463" alt="image" src="https://github.com/user-attachments/assets/8661e200-37a0-478b-8c31-3cc64f1b1c46" />
 
 A useful comparison is:
 
 | Method | Option Value | CI Lower | CI Upper | Relative CI Width |
 | --- | ---: | ---: | ---: | ---: |
-| Cholesky | 23.9863 | 23.3952 | 24.5773 | 100% |
-| Antithetic + Moment Matching | 23.9494 | 23.8236 | 24.0752 | 21.28% |
-| Inverse Cholesky | 23.9494 | 23.8236 | 24.0752 | 21.28% |
+| Cholesky | 25.6359 | 24.9319 | 26.3399 | 100% |
+| Antithetic + Moment Matching | 25.6597 | 25.3187 | 26.0007 | 48.43% |
+| Inverse Cholesky | 25.6414 | 25.5557 | 25.7272 | 12.18% |
 
 ## Source Code
 
