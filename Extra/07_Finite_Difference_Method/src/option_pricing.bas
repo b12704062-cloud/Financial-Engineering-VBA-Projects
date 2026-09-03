@@ -42,12 +42,12 @@ Sub Extra2_Click()
     n = CLng(ws.Range("C11").value)
     
     If S0 <= 0 Or K <= 0 Or sigma <= 0 Or t <= 0 Or m < 3 Or n < 1 Then
-        MsgBox "Input error: ½Ð½T»{ S0, K, sigma, T > 0¡A¥B m >= 3, n >= 1¡C", vbExclamation
+        MsgBox "Input error: è«‹ç¢ºèª S0, K, sigma, T > 0ï¼Œä¸” m >= 3, n >= 1ã€‚", vbExclamation
         Exit Sub
     End If
     
     If S0 < Smin Or S0 > Smax Then
-        MsgBox "Input error: S0 ¥²¶·¤¶©ó Smin »P Smax ¤§¶¡¡C", vbExclamation
+        MsgBox "Input error: S0 å¿…é ˆä»‹æ–¼ Smin èˆ‡ Smax ä¹‹é–“ã€‚", vbExclamation
         Exit Sub
     End If
     
@@ -238,7 +238,7 @@ Private Function Payoff(ByVal S As Double, ByVal K As Double, ByVal OptType As S
 End Function
 
 Private Function BoundaryValue(ByVal S As Double, ByVal K As Double, ByVal OptType As String) As Double
-    ' Â²¤ÆÃä¬É±ø¥ó¡G
+    ' ç°¡åŒ–é‚Šç•Œæ¢ä»¶ï¼š
     ' Call: S=0 -> 0, S=Smax -> Smax-K
     ' Put : S=0 -> K, S=Smax -> 0
     If UCase(OptType) = "C" Then
