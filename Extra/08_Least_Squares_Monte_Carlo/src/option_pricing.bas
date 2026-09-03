@@ -417,13 +417,13 @@ Private Function ReadByLabel(ws As Worksheet, ByVal labelText As String, Optiona
     
     If c Is Nothing Then
         If IsMissing(defaultVal) Then
-            Err.Raise vbObjectError + 1, , "§ä¤£¨ì¿é¤JÄæ¦ì¡G" & labelText
+            Err.Raise vbObjectError + 1, , "æ‰¾ä¸åˆ°è¼¸å…¥æ¬„ä½ï¼š" & labelText
         Else
             ReadByLabel = CDbl(defaultVal)
         End If
     ElseIf IsEmpty(c.Offset(0, 1).value) Or c.Offset(0, 1).value = "" Then
         If IsMissing(defaultVal) Then
-            Err.Raise vbObjectError + 2, , "Äæ¦ì¥kÃä¨S¦³­È¡G" & labelText
+            Err.Raise vbObjectError + 2, , "æ¬„ä½å³é‚Šæ²’æœ‰å€¼ï¼š" & labelText
         Else
             ReadByLabel = CDbl(defaultVal)
         End If
@@ -450,7 +450,7 @@ Private Function CleanLabel(ByVal S As String) As String
     S = Replace(S, " ", "")
     S = Replace(S, "_", "")
     S = Replace(S, ",", "")
-    S = Replace(S, "¡A", "")
+    S = Replace(S, "ï¼Œ", "")
     CleanLabel = S
 End Function
 
@@ -533,7 +533,7 @@ Private Function ReadByLabelInRange(rng As Range, _
         If CleanLabel(CStr(c.value)) = target Then
             If Trim(c.Offset(0, 1).value) = "" Then
                 If IsMissing(defaultVal) Then
-                    Err.Raise vbObjectError + 1, , "Äæ¦ì¥k°¼¨S¦³­È¡G" & labelText
+                    Err.Raise vbObjectError + 1, , "æ¬„ä½å³å´æ²’æœ‰å€¼ï¼š" & labelText
                 Else
                     ReadByLabelInRange = CDbl(defaultVal)
                 End If
@@ -545,7 +545,7 @@ Private Function ReadByLabelInRange(rng As Range, _
     Next c
 
     If IsMissing(defaultVal) Then
-        Err.Raise vbObjectError + 2, , "§ä¤£¨ìÄæ¦ì¡G" & labelText
+        Err.Raise vbObjectError + 2, , "æ‰¾ä¸åˆ°æ¬„ä½ï¼š" & labelText
     Else
         ReadByLabelInRange = CDbl(defaultVal)
     End If
